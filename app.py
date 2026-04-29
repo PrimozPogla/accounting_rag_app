@@ -6,7 +6,6 @@ import streamlit as st
 
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
 from langchain.embeddings.base import Embeddings
 
 
@@ -117,8 +116,8 @@ st.markdown("""
 
 class LocalEmbeddings(Embeddings):
     """
-    Lightweight local embeddings without sentence-transformers / torch.
-    This avoids heavy dependencies and works better on Streamlit Cloud.
+    Lightweight local embeddings without sentence-transformers, torch or ChromaDB.
+    This works well for small structured document collections on Streamlit Cloud.
     """
 
     def __init__(self, dim=384):
@@ -146,6 +145,36 @@ class LocalEmbeddings(Embeddings):
 
     def embed_query(self, text):
         return self._embed(text)
+
+
+class SimpleVectorStore:
+    """
+    Simple in-memory vector store.
+    Replaces ChromaDB to avoid deployment and memory problems on Streamlit Cloud.
+    """
+
+    def __init__(self, chunks, embeddings):
+        self.chunks = chunks
+        self.embeddings = embeddings
+
+        if chunks:
+            self.chunk_vectors = np.array(
+                embeddings.embed_documents([chunk.page_content for chunk in chunks])
+            )
+        else:
+            self.chunk_vectors = np.array([])
+
+    def similarity_search(self, query, k=1):
+        if len(self.chunks) == 0:
+            return []
+
+        query_vector = np.array(self.embeddings.embed_query(query))
+
+        scores = self.chunk_vectors @ query_vector
+
+        top_indices = scores.argsort()[-k:][::-1]
+
+        return [self.chunks[i] for i in top_indices]
 
 
 def load_documents(folder_path="documents"):
@@ -181,9 +210,9 @@ def create_vectorstore():
 
     embeddings = LocalEmbeddings()
 
-    db = Chroma.from_documents(
-        chunks,
-        embedding=embeddings
+    db = SimpleVectorStore(
+        chunks=chunks,
+        embeddings=embeddings
     )
 
     return db, chunks, documents
@@ -447,6 +476,7 @@ with st.sidebar:
             <p><b>Embedding model:</b><br> Lightweight hash embeddings</p>
             <p><b>Chunk size:</b> 1200</p>
             <p><b>Chunk overlap:</b> 200</p>
+            <p><b>Vector store:</b><br> Custom in-memory store</p>
             <p><b>Retrieval:</b><br> Rule-based parser + semantic fallback</p>
         </div>
         """,
@@ -526,6 +556,10 @@ elif page == "Search":
     )
 
     if query:
+        if not documents:
+            st.error("No documents were loaded. Please check the documents folder.")
+            st.stop()
+
         intent = parse_query(query)
         target_file = map_intent_to_file(intent)
 
@@ -637,7 +671,7 @@ elif page == "About / Statistics":
     st.markdown("""
     <div class="card">
         <b>Embedding model:</b> Lightweight hash embeddings<br>
-        <b>Vector database:</b> ChromaDB<br>
+        <b>Vector database:</b> Custom in-memory vector store<br>
         <b>Text splitter:</b> RecursiveCharacterTextSplitter<br>
         <b>Framework:</b> Streamlit<br>
         <b>Retrieval approach:</b> lightweight vector search with rule-based parsing for accounting-specific timing logic
