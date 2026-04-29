@@ -1,11 +1,12 @@
 import os
 import re
+import hashlib
+import numpy as np
 import streamlit as st
 
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from sentence_transformers import SentenceTransformer
 from langchain.embeddings.base import Embeddings
 
 
@@ -115,18 +116,44 @@ st.markdown("""
 
 
 class LocalEmbeddings(Embeddings):
-    def __init__(self):
-        self.model = SentenceTransformer("all-MiniLM-L6-v2")
+    """
+    Lightweight local embeddings without sentence-transformers / torch.
+    This avoids heavy dependencies and works better on Streamlit Cloud.
+    """
+
+    def __init__(self, dim=384):
+        self.dim = dim
+
+    def _embed(self, text):
+        vector = np.zeros(self.dim)
+
+        words = re.findall(r"\b\w+\b", text.lower())
+
+        for word in words:
+            h = int(hashlib.md5(word.encode("utf-8")).hexdigest(), 16)
+            index = h % self.dim
+            vector[index] += 1
+
+        norm = np.linalg.norm(vector)
+
+        if norm > 0:
+            vector = vector / norm
+
+        return vector.tolist()
 
     def embed_documents(self, texts):
-        return self.model.encode(texts).tolist()
+        return [self._embed(text) for text in texts]
 
     def embed_query(self, text):
-        return self.model.encode([text])[0].tolist()
+        return self._embed(text)
 
 
 def load_documents(folder_path="documents"):
     docs = []
+
+    if not os.path.exists(folder_path):
+        st.error("The documents folder was not found.")
+        return docs
 
     for file in os.listdir(folder_path):
         if file.endswith(".txt"):
@@ -147,6 +174,7 @@ def split_documents(documents):
     return splitter.split_documents(documents)
 
 
+@st.cache_resource
 def create_vectorstore():
     documents = load_documents()
     chunks = split_documents(documents)
@@ -303,8 +331,10 @@ def map_intent_to_file(intent):
 def find_full_document_by_file(documents, target_file):
     for doc in documents:
         source = doc.metadata.get("source", "").lower().replace("\\", "/")
+
         if target_file in source:
             return doc
+
     return None
 
 
@@ -313,6 +343,7 @@ def find_full_document_from_semantic_result(documents, semantic_doc):
 
     for doc in documents:
         source = doc.metadata.get("source", "").lower().replace("\\", "/")
+
         if source == semantic_source:
             return doc
 
@@ -330,6 +361,7 @@ def extract_section(text, start_heading, end_headings):
 
     for heading in end_headings:
         pos = lower_text.find(heading.lower(), start + len(start_heading))
+
         if pos != -1:
             end = min(end, pos)
 
@@ -343,6 +375,7 @@ def get_relevant_answer(text, question_type):
             "EFFECT ON FINANCIAL STATEMENTS",
             ["Cash Flow Classification", "Journal Entry", "Example", "Common Mistakes", "Related Concepts"]
         )
+
         if section:
             return section
 
@@ -352,6 +385,7 @@ def get_relevant_answer(text, question_type):
             "Journal Entry",
             ["Example", "Common Mistakes", "Related Concepts"]
         )
+
         if section:
             return section
 
@@ -361,6 +395,7 @@ def get_relevant_answer(text, question_type):
             "Common Mistakes",
             ["EFFECT ON FINANCIAL STATEMENTS", "Journal Entry", "Example", "Related Concepts"]
         )
+
         if section:
             return section
 
@@ -395,6 +430,7 @@ db, chunks, documents = create_vectorstore()
 
 with st.sidebar:
     st.markdown("## Navigation")
+
     page = st.radio(
         "Go to",
         ["Home", "Search", "About / Statistics"],
@@ -402,12 +438,13 @@ with st.sidebar:
     )
 
     st.markdown("## Project Info")
+
     st.markdown(
         f"""
         <div class="card">
             <p><b>Documents:</b> {len(documents)}</p>
             <p><b>Chunks:</b> {len(chunks)}</p>
-            <p><b>Embedding model:</b><br> all-MiniLM-L6-v2</p>
+            <p><b>Embedding model:</b><br> Lightweight hash embeddings</p>
             <p><b>Chunk size:</b> 1200</p>
             <p><b>Chunk overlap:</b> 200</p>
             <p><b>Retrieval:</b><br> Rule-based parser + semantic fallback</p>
@@ -444,8 +481,8 @@ if page == "Home":
     with col2:
         st.markdown("""
         <div class="card">
-            <h3>2. Semantic Retrieval</h3>
-            <p>User questions are converted into embeddings and compared with document chunks using semantic similarity.</p>
+            <h3>2. Lightweight Retrieval</h3>
+            <p>User questions are converted into lightweight hash-based vectors and compared with document chunks.</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -458,6 +495,7 @@ if page == "Home":
         """, unsafe_allow_html=True)
 
     st.markdown("### Example questions")
+
     st.markdown("""
     - We bought a machine and will pay later. What financial statements does it affect?
     - Customer paid invoice.
@@ -500,8 +538,13 @@ elif page == "Search":
 
         if selected_doc is None:
             semantic_results = db.similarity_search(query, k=1)
-            selected_doc = find_full_document_from_semantic_result(documents, semantic_results[0])
-            retrieval_method = "Semantic search fallback"
+
+            if semantic_results:
+                selected_doc = find_full_document_from_semantic_result(documents, semantic_results[0])
+                retrieval_method = "Semantic search fallback"
+            else:
+                selected_doc = documents[0]
+                retrieval_method = "Fallback to first document"
 
         answer_text = get_relevant_answer(
             selected_doc.page_content,
@@ -566,26 +609,38 @@ elif page == "About / Statistics":
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        st.markdown(f"<div class='metric-box'><div class='metric-number'>{len(documents)}</div><div class='metric-label'>Documents</div></div>", unsafe_allow_html=True)
+        st.markdown(
+            f"<div class='metric-box'><div class='metric-number'>{len(documents)}</div><div class='metric-label'>Documents</div></div>",
+            unsafe_allow_html=True
+        )
 
     with col2:
-        st.markdown(f"<div class='metric-box'><div class='metric-number'>{len(chunks)}</div><div class='metric-label'>Chunks</div></div>", unsafe_allow_html=True)
+        st.markdown(
+            f"<div class='metric-box'><div class='metric-number'>{len(chunks)}</div><div class='metric-label'>Chunks</div></div>",
+            unsafe_allow_html=True
+        )
 
     with col3:
-        st.markdown("<div class='metric-box'><div class='metric-number'>1200</div><div class='metric-label'>Chunk Size</div></div>", unsafe_allow_html=True)
+        st.markdown(
+            "<div class='metric-box'><div class='metric-number'>1200</div><div class='metric-label'>Chunk Size</div></div>",
+            unsafe_allow_html=True
+        )
 
     with col4:
-        st.markdown("<div class='metric-box'><div class='metric-number'>200</div><div class='metric-label'>Chunk Overlap</div></div>", unsafe_allow_html=True)
+        st.markdown(
+            "<div class='metric-box'><div class='metric-number'>200</div><div class='metric-label'>Chunk Overlap</div></div>",
+            unsafe_allow_html=True
+        )
 
     st.markdown("### Technical Details")
 
     st.markdown("""
     <div class="card">
-        <b>Embedding model:</b> all-MiniLM-L6-v2<br>
+        <b>Embedding model:</b> Lightweight hash embeddings<br>
         <b>Vector database:</b> ChromaDB<br>
         <b>Text splitter:</b> RecursiveCharacterTextSplitter<br>
         <b>Framework:</b> Streamlit<br>
-        <b>Retrieval approach:</b> semantic search with rule-based parsing for accounting-specific timing logic
+        <b>Retrieval approach:</b> lightweight vector search with rule-based parsing for accounting-specific timing logic
     </div>
     """, unsafe_allow_html=True)
 
