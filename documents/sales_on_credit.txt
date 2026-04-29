@@ -1,0 +1,39 @@
+Sales on Credit (Invoice Issued, Accounts Receivable, Pay Later, Deferred Payment)
+
+Scenario Description
+
+A company sells goods or services to a customer and issues an invoice, but the payment is not received immediately. This is a very common business transaction, especially when companies offer payment terms such as 15, 30, or 60 days. At the moment of sale, the company transfers control of the goods or completes the service, which means it has earned revenue even though the cash has not yet been received.
+
+Instead of receiving cash immediately, the company recognizes an asset called accounts receivable, which represents the customer’s obligation to pay in the future. This allows the company to track outstanding invoices, monitor receivables, and manage customer payments effectively.
+
+When This Applies
+
+This scenario applies when a company delivers goods or services and allows the customer to pay at a later date. It is typical in business relationships where credit terms are agreed in advance and payment is deferred.
+
+Accounting Logic
+
+Revenue is recognized at the moment the goods are delivered or the service is completed, because that is when the earning process is fulfilled. At the same time, accounts receivable is recorded as an asset, reflecting the company’s right to receive cash in the future. This ensures that revenue is recorded in the correct accounting period, regardless of when the payment is received.
+
+Common Mistakes
+
+A common mistake is recording the transaction only when cash is received, which would delay revenue recognition and distort financial results. Another mistake is confusing this scenario with advance payments from customers, where cash is received before delivery. Some users also incorrectly classify accounts receivable as revenue instead of as an asset.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Accounts Receivable increases (asset)  
+Income Statement: Revenue increases (profit increases)  
+Cash Flow: No immediate cash inflow at the time of sale  
+
+Journal Entry
+
+Debit Accounts Receivable  
+Credit Revenue  
+
+Example
+
+Debit Accounts Receivable 3.000,00  
+Credit Revenue 3.000,00  
+
+Related Concepts
+
+Customer Payment Received, Advance Payment from Customer, Revenue Recognition, Cash Flow Timing

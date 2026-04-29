@@ -1,0 +1,39 @@
+Inventory Write-Off (Obsolete Stock, Damaged Goods, Inventory Loss, Non-Cash Expense)
+
+Scenario Description
+
+A company identifies inventory that can no longer be sold due to damage, obsolescence, expiration, or loss. Such items no longer provide economic benefit and must be removed from the company’s records. This situation can arise in many industries, especially where goods are perishable, subject to technological changes, or stored for long periods.
+
+The write-off reflects the reality that the inventory has lost its value and cannot generate future revenue. This adjustment is necessary to ensure that financial statements present a true and fair view of the company’s assets.
+
+When This Applies
+
+This scenario applies when inventory is physically damaged, expired, obsolete, or missing. It is typically identified during stock counts, quality checks, or inventory audits.
+
+Accounting Logic
+
+The company reduces its inventory because the goods are no longer usable or saleable. At the same time, it recognizes an expense, often called inventory loss or write-off expense. This reflects the economic loss associated with the inventory. Recording this ensures that assets are not overstated and that losses are recognized in the correct accounting period.
+
+Common Mistakes
+
+A common mistake is delaying the write-off, which results in overstated inventory and misleading financial statements. Another mistake is recording the loss incorrectly as a normal operating expense without distinguishing it from inventory-related losses. Some users also fail to properly document the reason for the write-off.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Inventory decreases (asset)  
+Income Statement: Inventory Loss (expense) increases, reducing profit  
+Cash Flow: No cash outflow (non-cash loss, no immediate cash impact)  
+
+Journal Entry
+
+Debit Inventory Loss  
+Credit Inventory  
+
+Example
+
+Debit Inventory Loss 500,00  
+Credit Inventory 500,00  
+
+Related Concepts
+
+Inventory Accounting, Cost of Goods Sold, Stock Adjustments, Inventory Impairment, Non-Cash Expenses

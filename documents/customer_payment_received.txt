@@ -1,0 +1,39 @@
+Customer Payment Received (Invoice Settlement, Accounts Receivable Cleared, Cash Inflow, Payment of Outstanding Invoice)
+
+Scenario Description
+
+A customer pays an outstanding invoice that was previously recorded as accounts receivable. This transaction occurs after a sale on credit, when the company has already delivered goods or services and recognized revenue. The payment settles the customer’s obligation and converts the receivable into cash.
+
+This is a routine transaction in business operations, especially in environments where credit sales are common. The company receives cash or a bank transfer and reduces the amount owed by the customer. Proper recording of this step is important for maintaining accurate customer balances and tracking incoming payments.
+
+When This Applies
+
+This scenario applies when a customer pays an existing invoice that has already been recorded as accounts receivable. It does not apply to advance payments, where cash is received before delivery and no receivable exists yet.
+
+Accounting Logic
+
+The company increases cash because it has received payment. At the same time, it reduces accounts receivable, since the customer no longer owes the amount. No revenue is recorded at this stage, because the revenue was already recognized when the sale took place. This ensures that income is not counted twice and that revenue recognition remains correct.
+
+Common Mistakes
+
+A common mistake is recording revenue again when the payment is received, which leads to double counting. Another mistake is failing to clear the correct receivable, resulting in inaccurate customer balances. Some users also confuse this scenario with advance payments from customers, where no receivable exists at the time of payment.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Cash increases (asset), Accounts Receivable decreases (asset)  
+Income Statement: No impact on profit  
+Cash Flow: Cash inflow (increase in cash from customer payment)  
+
+Journal Entry
+
+Debit Cash  
+Credit Accounts Receivable  
+
+Example
+
+Debit Cash 3.000,00  
+Credit Accounts Receivable 3.000,00  
+
+Related Concepts
+
+Sales on Credit, Advance Payment from Customer, Accounts Receivable Management, Cash Flow Impact

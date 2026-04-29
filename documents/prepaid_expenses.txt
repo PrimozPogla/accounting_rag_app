@@ -1,0 +1,48 @@
+Prepaid Expenses (Prepayment, Pay Before Expense, Asset Before Consumption, Expense Over Time)
+
+Scenario Description
+
+A company pays for goods or services in advance, before the related benefit is received. Common examples include rent, insurance, maintenance contracts, or subscriptions paid for several months or a year in advance. At the time of payment, the company has not yet consumed the service, which means the cost cannot be recognized immediately as an expense.
+
+Instead, the payment represents a future economic benefit and is recorded as an asset called prepaid expenses. Over time, as the company uses the service or as time passes, the prepaid amount is gradually recognized as an expense in the income statement.
+
+When This Applies
+
+This scenario applies when a company makes a payment in advance for services or benefits that will be received in future accounting periods. It is common for rent, insurance policies, and long-term service agreements.
+
+Accounting Logic
+
+At the time of payment, the company records an asset because it has the right to receive future services. As the service is consumed, the asset is reduced and an expense is recognized. This ensures that expenses are matched with the periods in which the benefit is actually received, following the accrual accounting principle.
+
+Common Mistakes
+
+A common mistake is recording the entire payment as an expense immediately, which would understate assets and overstate expenses in the current period. Another mistake is forgetting to gradually recognize the expense over time. Some users also confuse prepaid expenses with accrued expenses, where the expense is recorded before payment is made.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Prepaid Expenses increase (asset), then gradually decrease over time  
+Income Statement: Expense is recognized gradually, reducing profit  
+Cash Flow: Immediate cash outflow at the time of payment (cash paid before expense recognition)  
+
+Journal Entry
+
+At payment:  
+Debit Prepaid Expenses  
+Credit Cash  
+
+When expense is recognized:  
+Debit Expense  
+Credit Prepaid Expenses  
+
+Example
+
+Debit Prepaid Expenses 2.400,00  
+Credit Cash 2.400,00  
+
+Monthly:  
+Debit Rent Expense 200,00  
+Credit Prepaid Expenses 200,00  
+
+Related Concepts
+
+Accrued Expenses, Advance Payment to Supplier, Expense Matching, Accrual Accounting, Timing of Expenses

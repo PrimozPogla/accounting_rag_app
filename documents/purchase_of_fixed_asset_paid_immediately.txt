@@ -1,0 +1,39 @@
+Purchase of Fixed Asset Paid Immediately (Machine, Equipment, Cash Purchase, Immediate Payment)
+
+Scenario Description
+
+A company purchases a machine, equipment, or another long-term asset and pays for it immediately at the time of acquisition. Unlike purchases on credit or deferred payment scenarios, there is no delay in settlement, and the company pays instantly using cash or a bank transfer. The acquired item is not intended for resale but for long-term use in business operations, which means it is classified as a fixed asset rather than inventory.
+
+This type of transaction is common when companies invest in equipment, vehicles, or infrastructure and either do not have supplier credit terms or choose immediate payment. The company gains control of the asset upon delivery and can start using it in operations right away, while the payment reduces available cash resources at the same time.
+
+When This Applies
+
+This scenario applies when a company acquires a fixed asset and pays for it immediately, without creating any liability. It is typical in situations where upfront payment is required or when companies want to avoid accounts payable or future obligations.
+
+Accounting Logic
+
+The company records the asset as a fixed asset because it will provide economic benefits over multiple accounting periods. At the same time, cash is reduced because the payment is completed immediately. This reflects a direct exchange of one asset (cash) for another (machinery or equipment). No liability is recorded because there is no outstanding obligation toward the supplier.
+
+Common Mistakes
+
+A common mistake is recording the purchase as an expense instead of a fixed asset, which would incorrectly reduce profit in the current period. Another mistake is classifying the asset as inventory, even though it is not intended for resale. Some users also incorrectly record accounts payable, even though the payment has already been completed. Confusing this scenario with purchase on credit is also a frequent error.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Fixed Assets increase (asset), Cash decreases (asset)  
+Income Statement: No immediate impact on profit  
+Cash Flow: Immediate cash outflow (cash decreases due to payment)  
+
+Journal Entry
+
+Debit Machinery / Fixed Assets  
+Credit Cash  
+
+Example
+
+Debit Machinery 8.000,00  
+Credit Cash 8.000,00  
+
+Related Concepts
+
+Purchase of Fixed Asset on Credit, Depreciation, Cash Flow Impact, Fixed Asset Accounting

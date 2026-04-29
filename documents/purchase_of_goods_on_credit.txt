@@ -1,0 +1,37 @@
+Purchase of Goods on Credit (Inventory, Accounts Payable, Supplier Invoice, Pay Later, Deferred Payment)
+
+Scenario Description
+
+A company purchases goods from a supplier and receives an invoice, but the payment is not made immediately. This is one of the most common business transactions, especially when suppliers offer payment terms such as 30 days. The company obtains control over the goods upon delivery, meaning they can be used or resold, and therefore they are recorded as inventory. At the same time, the company incurs an obligation toward the supplier, which is recorded as accounts payable.
+
+When This Applies
+
+This scenario applies when goods are delivered before payment is made. It is typical in supplier relationships where credit terms are agreed. It does not apply when payment is made in advance or at the same time as delivery.
+
+Accounting Logic
+
+The company recognizes inventory because it now controls the goods. At the same time, it recognizes a liability because it has not yet paid for them. This ensures that both the economic benefit (inventory) and the obligation (accounts payable) are recorded in the correct period.
+
+Common Mistakes
+
+A common mistake is recording the transaction as an expense instead of inventory, especially if the goods are intended for resale. Another mistake is confusing this scenario with advance payments, where cash is paid before receiving the goods.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Inventory increases (asset), Accounts Payable increases (liability)  
+Income Statement: No immediate impact on profit  
+Cash Flow: No impact at the time of purchase  
+
+Journal Entry
+
+Debit Inventory  
+Credit Accounts Payable  
+
+Example
+
+Debit Inventory 2.500,00  
+Credit Accounts Payable 2.500,00  
+
+Related Concepts
+
+Advance Payment to Supplier, Supplier Payment, Inventory Accounting

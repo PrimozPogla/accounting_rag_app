@@ -1,0 +1,39 @@
+Purchase of Goods Paid Immediately (Inventory, Cash Payment, Immediate Settlement, No Liability)
+
+Scenario Description
+
+A company purchases goods from a supplier and pays for them immediately at the time of delivery, either in cash or via bank transfer. In this scenario, the company receives the goods and settles the payment in the same moment, meaning there is no outstanding obligation toward the supplier. The goods are recognized as inventory because the company gains control over them and can use or resell them in its operations.
+
+This type of transaction is common in situations where suppliers require immediate payment, offer discounts for early payment, or when the company prefers not to create open liabilities. Compared to purchases on credit, this scenario has a direct and immediate impact on the company’s cash position.
+
+When This Applies
+
+This scenario applies when the purchase and payment occur at the same time. It is typical in cash transactions, prepaid deliveries settled instantly, or when payment terms do not allow delayed settlement.
+
+Accounting Logic
+
+The company records the goods as inventory because it now owns them. At the same time, it reduces cash, since the payment is completed immediately. Unlike purchases on credit, no liability is created, as there is no future obligation toward the supplier. This reflects a direct exchange of one asset (cash) for another (inventory).
+
+Common Mistakes
+
+A common mistake is incorrectly recording this transaction as accounts payable, even though the payment has already been made. Another error is confusing it with advance payment, where cash is paid before receiving the goods. In this scenario, both events happen simultaneously.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Inventory increases (asset), Cash decreases (asset)  
+Income Statement: No immediate impact on profit  
+Cash Flow: Immediate cash outflow  
+
+Journal Entry
+
+Debit Inventory  
+Credit Cash  
+
+Example
+
+Debit Inventory 1.200,00  
+Credit Cash 1.200,00  
+
+Related Concepts
+
+Purchase on Credit, Advance Payment to Supplier, Inventory Accounting

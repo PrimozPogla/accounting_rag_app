@@ -1,0 +1,39 @@
+Supplier Payment (Clearing Open Invoice, Accounts Payable Settlement, Pay Supplier, Cash Outflow)
+
+Scenario Description
+
+A company pays a supplier for goods or services that were previously purchased on credit. In earlier stages, the company received the goods and recorded a liability in accounts payable. This transaction represents the settlement of that obligation. The payment is typically made via bank transfer, but it can also occur in cash depending on the business environment.
+
+This step is part of the normal purchase-to-pay cycle. It does not create new expenses or assets, but rather converts an existing liability into a reduction of cash. Accurate recording of this transaction is important to ensure that supplier balances are correct and that the company does not appear to owe amounts that have already been paid.
+
+When This Applies
+
+This scenario applies when a company pays an outstanding invoice that has already been recorded as accounts payable. It is typical in transactions where goods or services were received earlier and payment is made later according to agreed terms.
+
+Accounting Logic
+
+The company reduces accounts payable because the obligation to the supplier is settled. At the same time, cash is reduced because the payment has been made. No new expense is recorded at this stage, since the expense or asset was already recognized when the original transaction occurred.
+
+Common Mistakes
+
+A common mistake is recording the payment as an expense, even though the expense was already recognized earlier. Another mistake is failing to clear the correct payable, which can result in incorrect supplier balances. Some users also confuse this scenario with advance payments, where cash is paid before receiving goods or services.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Accounts Payable decreases (liability), Cash decreases (asset)  
+Income Statement: No impact on profit  
+Cash Flow: Cash outflow (payment to supplier reduces cash)  
+
+Journal Entry
+
+Debit Accounts Payable  
+Credit Cash  
+
+Example
+
+Debit Accounts Payable 2.500,00  
+Credit Cash 2.500,00  
+
+Related Concepts
+
+Purchase on Credit, Advance Payment to Supplier, Cash Management, Accounts Payable Settlement

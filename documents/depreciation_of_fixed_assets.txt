@@ -1,0 +1,39 @@
+Depreciation of Fixed Assets (Non-Cash Expense, Allocation of Cost, Accumulated Depreciation, Asset Usage Over Time)
+
+Scenario Description
+
+A company allocates the cost of a fixed asset, such as machinery or equipment, over its useful life. Instead of recognizing the full cost as an expense at the time of purchase, the company spreads the cost over multiple accounting periods. This reflects the fact that the asset provides economic benefits over time rather than all at once.
+
+Depreciation is a routine and recurring transaction, usually recorded monthly or annually. It does not involve any cash movement, meaning no cash outflow occurs at the time of depreciation, but it ensures that financial statements accurately reflect the usage and wear of long-term assets.
+
+When This Applies
+
+This scenario applies when a company owns fixed assets that are used over more than one accounting period and need to be depreciated systematically. It is relevant for assets such as machines, vehicles, buildings, and equipment.
+
+Accounting Logic
+
+The company records depreciation as an expense to reflect the consumption of the asset’s value over time. At the same time, it increases accumulated depreciation, which reduces the carrying value of the asset indirectly. This approach ensures that expenses are matched with the periods in which the asset is used to generate revenue.
+
+Common Mistakes
+
+A common mistake is recording the full cost of the asset as an expense immediately, instead of depreciating it over time. Another mistake is forgetting to record depreciation altogether, which leads to overstated asset values and profits. Some users also incorrectly reduce the asset account directly instead of using accumulated depreciation.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Accumulated Depreciation increases (contra-asset), Net Fixed Assets decrease  
+Income Statement: Depreciation Expense increases, reducing profit  
+Cash Flow: No cash outflow (non-cash expense, no immediate cash impact)  
+
+Journal Entry
+
+Debit Depreciation Expense  
+Credit Accumulated Depreciation  
+
+Example
+
+Debit Depreciation Expense 1.200,00  
+Credit Accumulated Depreciation 1.200,00  
+
+Related Concepts
+
+Fixed Asset Accounting, Purchase of Fixed Assets, Accrual Accounting, Non-Cash Expenses

@@ -1,0 +1,39 @@
+Purchase of Fixed Asset on Credit (Machine, Equipment, Long-term Asset, Deferred Payment)
+
+Scenario Description
+
+A company purchases a machine or equipment that will be used in operations over a longer period of time, typically more than one year. Unlike goods intended for resale, such as inventory, this type of purchase is classified as a fixed asset because it provides long-term economic benefits. The supplier issues an invoice, but the company does not pay immediately, meaning the obligation remains open.
+
+This type of transaction is common when companies invest in production capacity, infrastructure, or equipment necessary for business operations. The company gains control of the asset upon delivery and therefore recognizes it in the balance sheet, even though payment has not yet been made.
+
+When This Applies
+
+This scenario applies when a company acquires long-term assets such as machinery, equipment, or vehicles and payment is deferred. It is typical in supplier agreements that allow payment terms for larger investments.
+
+Accounting Logic
+
+The company records the machine as a fixed asset because it will be used over multiple accounting periods and will generate future economic benefits. At the same time, it records a liability in accounts payable, since the invoice has not yet been paid. This ensures that both the acquired asset and the related obligation are recognized correctly. Over time, the asset will be depreciated to reflect its usage.
+
+Common Mistakes
+
+A common mistake is recording the purchase as an expense instead of a fixed asset, which would incorrectly reduce profit in the current period. Another mistake is classifying the asset as inventory, even though it is not intended for resale. Some users also forget that depreciation must be applied in subsequent periods.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Fixed Assets increase (asset), Accounts Payable increases (liability)  
+Income Statement: No immediate impact on profit  
+Cash Flow: No impact at the time of purchase  
+
+Journal Entry
+
+Debit Machinery / Fixed Assets  
+Credit Accounts Payable  
+
+Example
+
+Debit Machinery 10.000,00  
+Credit Accounts Payable 10.000,00  
+
+Related Concepts
+
+Depreciation, Purchase Paid Immediately, Fixed Asset Accounting

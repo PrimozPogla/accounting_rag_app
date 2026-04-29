@@ -1,0 +1,48 @@
+Advance Payment to Supplier (Prepayment, Pay Before Delivery, Advance to Supplier, Future Goods)
+
+Scenario Description
+
+A company makes a payment to a supplier before receiving the goods or services. This type of transaction is common in situations where suppliers require prepayment, especially for custom orders, large purchases, or when working with new business partners. At the time of payment, the company does not yet control the goods, which means the payment cannot be recognized as inventory or expense. Instead, it represents a right to receive goods or services in the future.
+
+Because the economic benefit has not yet been received, the payment is recorded as an asset called an advance to supplier. Once the goods are delivered or the service is performed, the company transfers the amount from the advance account to the appropriate account, such as inventory or expense. This ensures proper timing in financial reporting and prevents premature recognition of costs.
+
+When This Applies
+
+This scenario applies when payment is made before the delivery of goods or completion of services. It is typical in supplier agreements that require upfront payment or deposits.
+
+Accounting Logic
+
+At the time of payment, the company records an asset because it expects future economic benefit. When the goods are received, the asset is converted into inventory or expense, depending on the nature of the purchase. This approach ensures that financial statements reflect the actual flow of goods and services.
+
+Common Mistakes
+
+A common mistake is recording the payment directly as an expense or inventory, even though the goods have not yet been received. Another frequent error is confusing this scenario with purchases on credit, where goods are received first and paid later.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Advance to Supplier increases (asset), Cash decreases (asset)  
+Income Statement: No immediate impact on profit  
+Cash Flow: Immediate cash outflow  
+
+Journal Entry
+
+At advance payment:  
+Debit Advance to Supplier  
+Credit Cash  
+
+When goods are received:  
+Debit Inventory (or Expense)  
+Credit Advance to Supplier  
+
+Example
+
+Debit Advance to Supplier 1.000,00  
+Credit Cash 1.000,00  
+
+Later:  
+Debit Inventory 1.000,00  
+Credit Advance to Supplier 1.000,00  
+
+Related Concepts
+
+Purchase on Credit, Purchase Paid Immediately, Prepaid Expenses

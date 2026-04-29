@@ -1,0 +1,39 @@
+Accrued Expenses (Accrual Accounting, Expense Incurred, No Invoice Yet, Accrued Liabilities)
+
+Scenario Description
+
+A company incurs an expense during an accounting period, but the invoice from the supplier has not yet been received by the end of that period. Even though no formal document has been issued, the company has already consumed the service or benefit, such as electricity, rent, or consulting services. To ensure accurate financial reporting, the expense must still be recognized in the correct period.
+
+This adjustment is part of the accrual accounting principle, which requires that expenses are recorded when they are incurred, not when they are paid. Accrued expenses are therefore used to reflect obligations that exist even without an invoice.
+
+When This Applies
+
+This scenario applies when a company has received goods or services, but the supplier invoice has not yet been received by the reporting date. It is common at the end of accounting periods, especially for utilities, services, and ongoing contracts.
+
+Accounting Logic
+
+The company records the expense because the economic benefit has already been consumed. At the same time, it records a liability, called accrued liabilities, because it expects to pay the supplier in the future. This ensures that expenses are matched with the correct accounting period and that liabilities are not understated.
+
+Common Mistakes
+
+A common mistake is not recording the expense at all, which results in understated expenses and overstated profit. Another mistake is recording the expense only when the invoice is received, even though it relates to a previous period. Some users also confuse accrued expenses with prepaid expenses, where payment is made in advance.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Accrued Liabilities increase (liability)  
+Income Statement: Expense increases, reducing profit  
+Cash Flow: No cash outflow at this stage (expense recognized before payment)  
+
+Journal Entry
+
+Debit Expense  
+Credit Accrued Liabilities  
+
+Example
+
+Debit Electricity Expense 800,00  
+Credit Accrued Liabilities 800,00  
+
+Related Concepts
+
+Prepaid Expenses, Expense Recognition, Accrual Accounting, Matching Principle, Non-Cash Timing

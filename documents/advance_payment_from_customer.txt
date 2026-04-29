@@ -1,0 +1,48 @@
+Advance Payment from Customer (Prepayment, Unearned Revenue, Cash Received Before Delivery, Customer Deposit)
+
+Scenario Description
+
+A customer pays the company in advance before the goods are delivered or the service is performed. This situation is common in industries where deposits are required, for custom orders, or when companies want to reduce credit risk. At the moment the payment is received, the company has not yet fulfilled its obligation, which means it has not earned the revenue.
+
+Because the goods or services have not yet been delivered, the payment cannot be recognized as revenue. Instead, it is recorded as a liability called advance from customer or unearned revenue, representing the company’s obligation to deliver goods or services in the future. Once the delivery is completed, the liability is cleared and revenue is recognized.
+
+When This Applies
+
+This scenario applies when the company receives payment before delivering goods or completing services. It is typical in advance billing, deposits, or prepayments from customers.
+
+Accounting Logic
+
+The company records cash because it has received payment. At the same time, it records a liability because it owes goods or services to the customer. Revenue is recognized only when the performance obligation is fulfilled, ensuring correct timing and compliance with accounting principles.
+
+Common Mistakes
+
+A common mistake is recognizing revenue immediately upon receiving the payment, even though the goods or services have not yet been delivered. Another mistake is confusing this scenario with sales on credit, where revenue is recognized first and payment comes later.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Cash increases (asset), Advance from Customer increases (liability)  
+Income Statement: No immediate impact on profit  
+Cash Flow: Cash inflow (cash received before revenue recognition)  
+
+Journal Entry
+
+At advance receipt:  
+Debit Cash  
+Credit Advance from Customer  
+
+When goods/services are delivered:  
+Debit Advance from Customer  
+Credit Revenue  
+
+Example
+
+Debit Cash 2.000,00  
+Credit Advance from Customer 2.000,00  
+
+Later:  
+Debit Advance from Customer 2.000,00  
+Credit Revenue 2.000,00  
+
+Related Concepts
+
+Sales on Credit, Customer Payment Received, Revenue Recognition, Cash Flow Timing, Unearned Revenue

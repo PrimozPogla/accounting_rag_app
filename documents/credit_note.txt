@@ -1,0 +1,39 @@
+Credit Note (Sales Return, Revenue Reduction, Contra-Revenue, Refund or Adjustment)
+
+Scenario Description
+
+A company issues a credit note to a customer after a sale has already been recorded. This typically happens when goods are returned, a pricing error is corrected, or a post-sale discount is granted. The credit note reduces the original sale and adjusts the customer’s outstanding balance. If the customer has not yet paid, the receivable is reduced. If the invoice has already been paid, the company may either refund cash or apply the credit to a future invoice.
+
+This transaction is part of the order-to-cash cycle and ensures that revenue reflects the actual amount earned after returns, refunds, or adjustments.
+
+When This Applies
+
+This scenario applies when a previously recorded sale needs to be partially or fully reversed. It is common in cases of product returns, warranty claims, pricing corrections, or negotiated discounts after invoicing.
+
+Accounting Logic
+
+Because the original revenue is no longer fully valid, the company reduces revenue using a contra-revenue account such as sales returns or revenue reductions. At the same time, it reduces accounts receivable (if the invoice is unpaid) or cash (if the customer has already paid and a refund is issued). This ensures that revenue and customer balances are stated correctly.
+
+Common Mistakes
+
+A common mistake is recording the credit note as an expense instead of reducing revenue. Another mistake is failing to adjust the correct receivable, which leads to incorrect customer balances. Some users also forget to distinguish between unpaid invoices and paid invoices that require a cash refund.
+
+EFFECT ON FINANCIAL STATEMENTS
+
+Balance Sheet: Accounts Receivable decreases (asset) or Cash decreases (asset if refunded)  
+Income Statement: Revenue decreases (contra-revenue reduces profit)  
+Cash Flow: No impact unless a refund is paid (then cash outflow occurs)  
+
+Journal Entry
+
+Debit Sales Returns (or Revenue Reduction)  
+Credit Accounts Receivable  
+
+Example
+
+Debit Sales Returns 300,00  
+Credit Accounts Receivable 300,00  
+
+Related Concepts
+
+Sales on Credit, Customer Payment Received, Revenue Adjustments, Refunds, Contra-Revenue
